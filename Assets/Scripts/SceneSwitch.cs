@@ -19,6 +19,9 @@ public class SceneSwitch : MonoBehaviour
         if (input == "Start" || input == "start"){
             SceneManager.LoadScene("Dorm");
         }
+        if (input == "Tips" || input == "tips"){
+            SceneManager.LoadScene("Tips");
+        }
     }
 
 

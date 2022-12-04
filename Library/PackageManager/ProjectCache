@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638057292370000000
-    m_Hash: 1408241324
+      ticks: 638057810010000000
+    m_Hash: 1228094600
   m_LockFileStatus:
     m_FilePath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638057292370000000
-    m_Hash: 994498553
+      ticks: 638057810010000000
+    m_Hash: 1707782628
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,12 +22,12 @@ m_LocalPackages:
 m_ProjectPath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Packages
 m_EditorVersion: 2022.1.16f1 (7321c9670bc2)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@1.17.2
+- packageId: com.unity.collab-proxy@1.17.7
   testable: 0
   isDirectDependency: 1
-  version: 1.17.2
+  version: 1.17.7
   source: 1
-  resolvedPath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Library/PackageCache/com.unity.collab-proxy@1.17.2
+  resolvedPath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Library/PackageCache/com.unity.collab-proxy@1.17.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -157,13 +157,13 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637937432480000000
+  datePublishedTicks: 638036787040000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 14d129dcc778f8ea2fdf9d0240b47924e4f0dbb1
+    revision: 1641a631fd39029595decb52bdfb641b32ed194c
     path: 
   unityLifecycle:
     version: 1.17.2
@@ -749,12 +749,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.6
     nextVersion: 
-- packageId: com.unity.timeline@1.7.1
+- packageId: com.unity.timeline@1.7.2
   testable: 0
   isDirectDependency: 1
-  version: 1.7.1
+  version: 1.7.2
   source: 1
-  resolvedPath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Library/PackageCache/com.unity.timeline@1.7.1
+  resolvedPath: /Users/elviraruixiong/Desktop/CS576 Final Project/CS576-CS-Student-Simulator/Library/PackageCache/com.unity.timeline@1.7.2
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -882,13 +882,13 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 637824211470000000
+  datePublishedTicks: 638019579250000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: 9cec37f449d04026a6c454de9e1bf6f34672764e
+    revision: 40b193547031a6a97c1fc47f71900f6690c33c6b
     path: 
   unityLifecycle:
     version: 1.7.1
