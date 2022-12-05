@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     public string input;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 4fc7d6e5d37d2e996e7531c09a11e89f0f7a365e
     public void switchScene(string scenename)
     {
         Debug.Log(scenename);
@@ -19,9 +23,12 @@ public class SceneSwitch : MonoBehaviour
         if (input == "Start" || input == "start"){
             SceneManager.LoadScene("Dorm");
         }
+<<<<<<< HEAD
         if (input == "Tips" || input == "tips"){
             SceneManager.LoadScene("Tips");
         }
+=======
+>>>>>>> 4fc7d6e5d37d2e996e7531c09a11e89f0f7a365e
     }
 
 
