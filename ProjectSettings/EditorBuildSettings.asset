@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Tips.unity
-    guid: 5bdea0cc7e92a4a8abc4685f4aa34966
-  - enabled: 1
-=======
->>>>>>> 4fc7d6e5d37d2e996e7531c09a11e89f0f7a365e
     path: Assets/Scenes/Dorm.unity
     guid: 68a1ff705dd024890994350d8c2f8aad
+  - enabled: 1
+    path: Assets/Scenes/Tips.unity
+    guid: 37fbfae26714e4c9ea05fdbed31bc7e2
   m_configObjects: {}
