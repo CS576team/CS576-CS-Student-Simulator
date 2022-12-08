@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
+
     public string input;
     public void switchScene(string scenename)
     {
         Debug.Log(scenename);
+        if (scenename == "Computer"){
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         SceneManager.LoadScene(scenename);
     }
 
