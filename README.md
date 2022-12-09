@@ -1,7 +1,7 @@
 # CS576-CS-Student-Simulator
 
 ## Main Menu: (Elvira) DONE	
--[] Title
+[x] Title
 Start button (goes to dorm room scene) 
 Classroom background
 
