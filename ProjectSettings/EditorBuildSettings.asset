@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Dorm.unity
     guid: 4e4aa0a37831112448093cef958c7779
   - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: c10c5d528a6a541f38be57d51308394f
+  - enabled: 1
     path: Assets/Scenes/Computer.unity
     guid: 6c0c470bba8d14655b7c0fb4e292e28b
   m_configObjects: {}
