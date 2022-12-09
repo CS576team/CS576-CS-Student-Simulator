@@ -25,8 +25,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
         }
 
 
@@ -53,10 +51,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 character.localRotation = m_CharacterTargetRot;
                 camera.localRotation = m_CameraTargetRot;
             }
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
 
-            //UpdateCursorLock();
+            UpdateCursorLock();
         }
 
         public void SetCursorLock(bool value)

@@ -83,10 +83,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
-        // private void OnCollisionEnter(Collision other) {
-        //     Debug.Log(other.gameObject.name);
-        // }
-
 
         private void PlayLandingSound()
         {
@@ -260,6 +256,4 @@ namespace UnityStandardAssets.Characters.FirstPerson
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
     }
-
-    
 }
