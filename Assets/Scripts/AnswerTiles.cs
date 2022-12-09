@@ -6,14 +6,17 @@ public class AnswerTiles : MonoBehaviour
 {
     private string correct_tile;
 
+    private int attempts_num;
+    public ClassroomUI ClassroomUI;
+
     void Start()
     {
         correct_tile = "TileB";
+        attempts_num = 3;
     }
 
     void Update()
     {
-        
     }
 
     void OnTriggerEnter(Collider other) {
@@ -23,10 +26,12 @@ public class AnswerTiles : MonoBehaviour
         StartCoroutine(WaitForAnswer(tile, render));
     }
 
-     IEnumerator WaitForAnswer(string tile, Renderer render) {
+    IEnumerator WaitForAnswer(string tile, Renderer render) {
         yield return new WaitForSeconds(2);
         if (tile != correct_tile) {
             render.material.color = Color.red;
+            attempts_num--;
+            ClassroomUI.UpdateUI(attempts_num);
         } else {
             render.material.color = Color.green;
         }
