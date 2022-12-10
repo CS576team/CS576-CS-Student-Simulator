@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class SceneSwitch : MonoBehaviour
 {
@@ -28,6 +30,10 @@ public class SceneSwitch : MonoBehaviour
         input = i;
         Debug.Log(input);
         if (input == "Start" || input == "start"){
+            BinaryFormatter f = new BinaryFormatter();
+            string path = "Assets/Scripts/Data/player.fun";
+            File.Delete (path);
+            
             SceneManager.LoadScene("Dorm");
         }
         if (input == "Tips" || input == "tips"){
