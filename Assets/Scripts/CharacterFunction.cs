@@ -12,6 +12,16 @@ public class CharacterFunction : MonoBehaviour
     public string msg;
     public TMP_Text confirm_text;
     
+    public int day;
+    public TMP_Text day_text;
+
+    public void LoadData(){
+        playerData data = SaveData.Load();
+        day = data.day;
+        day_text.text = "Day: " + day;
+        
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +32,11 @@ public class CharacterFunction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(day == 0){
+            LoadData();
+        } else if (day == 6){
+            SceneManager.LoadScene("SemesterResult");
+        }
         
     }
     private void OnCollisionEnter(Collision other) {
@@ -34,9 +49,13 @@ public class CharacterFunction : MonoBehaviour
         }
         else if (other.gameObject.name == "Door"){
             msg = "Classroom";
+            if(day != 0 && day % 3 == 0){
+                msg = "ExamRoom";
+            }
             confirm_text.text = "Leave Dorm";
             yes.SetActive(true);
             no.SetActive(true);
         }
     }
+    
 }

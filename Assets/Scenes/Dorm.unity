@@ -457,6 +457,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: yes
           m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 854181123}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: savePlayerData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 854181123}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: LoadPlayerData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &353737327
 MonoBehaviour:
@@ -1220,6 +1244,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 353737324}
     - target: {fileID: 425425036409057447, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: day_text
+      value: 
+      objectReference: {fileID: 1385974100}
+    - target: {fileID: 425425036409057447, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: confirm_text
       value: 
       objectReference: {fileID: 1776620937}
@@ -1342,11 +1370,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: 
+  confirm_msg: 
   yes: {fileID: 353737324}
   no: {fileID: 961256302}
   cf: {fileID: 299389822}
   day_text: {fileID: 1385974100}
-  day: 1
+  day: 0
 --- !u!1 &902425968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Day:  1'
+  m_text: 'Day:  0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3032,6 +3061,24 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+--- !u!1 &1499012143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 105298, guid: 8379dae3f7b2e824bb1b8f1455c69064, type: 3}
+  m_PrefabInstance: {fileID: 1499012142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1499012144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499012143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 3, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1523778102
 GameObject:
   m_ObjectHideFlags: 0

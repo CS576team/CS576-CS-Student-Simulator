@@ -8,7 +8,6 @@ public class SceneSwitch : MonoBehaviour
 {
 
     public string input;
-    // private bool isConfirm;
     public GameObject yes;
     public GameObject no;
     public CharacterFunction cf;
@@ -37,18 +36,30 @@ public class SceneSwitch : MonoBehaviour
     }
 
     public void confirmBox(string msg){
-        
+        Debug.Log("confirmbox appeared!");
         if (msg == "yes"){
-            // isConfirm = true;
-            Debug.Log(cf.msg);
-            SceneManager.LoadScene(cf.msg);
-            if(cf.msg == "Classroom"){
-                day+=1;
-                day_text.text = "Day: " + day.ToString();
+            Debug.Log("scene:"+cf.msg); 
+            if(cf.msg == "Classroom" || cf.msg == "ExamRoom" ){
+                day = LoadData() +1;
             }
+            SceneManager.LoadScene(cf.msg);
         }
         yes.SetActive(false);
         no.SetActive(false); 
+    }
+
+    public void savePlayerData(){
+        SaveData.SavePlayer(this);
+    }
+    public int LoadData(){
+        playerData data = SaveData.Load();
+        return data.day;
+        
+    }
+    public void LoadPlayerData(){
+        playerData data = SaveData.Load();
+        day = data.day;
+        day_text.text = "Day: " + day;
     }
 
 

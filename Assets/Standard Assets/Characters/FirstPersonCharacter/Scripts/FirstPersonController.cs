@@ -83,9 +83,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
-        // private void OnCollisionEnter(Collision other) {
-        //     Debug.Log(other.gameObject.name);
-        // }
 
 
         private void PlayLandingSound()
