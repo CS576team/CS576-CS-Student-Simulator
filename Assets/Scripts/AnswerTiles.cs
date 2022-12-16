@@ -6,13 +6,12 @@ public class AnswerTiles : MonoBehaviour
 {
     private string correct_tile;
 
-    private int attempts_num;
     public ClassroomUI ClassroomUI;
 
     void Start()
     {
         correct_tile = "TileB";
-        attempts_num = 3;
+        PlayerPrefs.SetInt("attempts", 3);
     }
 
     void Update()
@@ -20,6 +19,10 @@ public class AnswerTiles : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
+        // Debug.Log(gameObject);
+        // if (other.name == "Player") { 
+        //     Debug.Log("hi");
+        // }
         Renderer render = GetComponent<Renderer>();
         string tile = gameObject.name;
         render.material.color = Color.blue;
@@ -30,8 +33,10 @@ public class AnswerTiles : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (tile != correct_tile) {
             render.material.color = Color.red;
-            attempts_num--;
-            ClassroomUI.UpdateUI(attempts_num);
+            int attempts = PlayerPrefs.GetInt("attempts");
+            attempts--;
+            PlayerPrefs.SetInt("attempts", attempts);
+            ClassroomUI.UpdateUI(attempts);
         } else {
             render.material.color = Color.green;
         }
