@@ -15,7 +15,7 @@ public class SceneSwitch : MonoBehaviour
     public CharacterFunction cf;
     public TMP_Text day_text;
     public int day;
-
+    
     public void switchScene(string scenename)
     {
         Debug.Log(scenename);
