@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnswerTiles : MonoBehaviour
+public class ClassroomManager : MonoBehaviour
 {
     private string correct_tile;
 
@@ -19,14 +19,20 @@ public class AnswerTiles : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        // Debug.Log(gameObject);
-        // if (other.name == "Player") { 
-        //     Debug.Log("hi");
-        // }
-        Renderer render = GetComponent<Renderer>();
-        string tile = gameObject.name;
-        render.material.color = Color.blue;
-        StartCoroutine(WaitForAnswer(tile, render));
+        if (other.name == "Player") { 
+            if (gameObject.name == "HealingBook") {
+                Destroy(gameObject);
+                int attempts = PlayerPrefs.GetInt("attempts");
+                attempts++;
+                PlayerPrefs.SetInt("attempts", attempts);
+                ClassroomUI.UpdateUI(attempts);
+            } else { 
+                Renderer render = GetComponent<Renderer>();
+                string tile = gameObject.name;
+                render.material.color = Color.blue;
+                StartCoroutine(WaitForAnswer(tile, render));
+            }
+        }
     }
 
     IEnumerator WaitForAnswer(string tile, Renderer render) {
