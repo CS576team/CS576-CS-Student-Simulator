@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClassroomItems : MonoBehaviour
 {
     public ClassroomUI ClassroomUI;
+    public ClassroomManager ClassroomManager;
     private string correct_tile;
 
     void Start() {
@@ -16,6 +17,7 @@ public class ClassroomItems : MonoBehaviour
         if (other.name == "Player") { 
             if (gameObject.name.Contains("Book")) {
                 Destroy(gameObject);
+                ClassroomManager.PlaySound("book");
                 int attempts = PlayerPrefs.GetInt("attempts");
                 attempts++;
                 PlayerPrefs.SetInt("attempts", attempts);
@@ -24,6 +26,7 @@ public class ClassroomItems : MonoBehaviour
                 Renderer render = GetComponent<Renderer>();
                 string tile = gameObject.name;
                 render.material.color = Color.blue;
+                ClassroomManager.PlaySound("tile");
                 StartCoroutine(WaitForAnswer(tile, render));
             }
         }
@@ -36,6 +39,7 @@ public class ClassroomItems : MonoBehaviour
             int attempts = PlayerPrefs.GetInt("attempts");
             attempts--;
             PlayerPrefs.SetInt("attempts", attempts);
+            ClassroomManager.PlaySound("incorrect");
             ClassroomUI.UpdateUI(attempts);
         } else {
             render.material.color = Color.green;

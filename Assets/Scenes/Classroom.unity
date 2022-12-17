@@ -275,7 +275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &35977055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &150761770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -964,6 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &171603725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1433,6 +1436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &222851355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1824,6 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &291008848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1911,6 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_obj: {fileID: 1141694186}
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &304351153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2272,6 +2278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &323443579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2915,6 +2922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &449527609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3810,6 +3818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_obj: {fileID: 1141694186}
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &584469924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4005,6 +4014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &616590730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5047,6 +5057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &746124472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5158,6 +5169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &760489107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5641,6 +5653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &815215094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6111,6 +6124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &941632193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6636,6 +6650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_obj: {fileID: 1141694186}
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1 &1019149692
 GameObject:
   m_ObjectHideFlags: 0
@@ -7379,6 +7394,12 @@ MonoBehaviour:
   end_cam: {fileID: 963194225}
   WinScreen: {fileID: 789127805}
   LoseScreen: {fileID: 565577776}
+  Correct_Answer: {fileID: 8300000, guid: 207923e3d90cc9b44866937397b4a3ea, type: 3}
+  Garbage_collide: {fileID: 8300000, guid: f30142031deb9ac45aad6992e505fc6f, type: 3}
+  Incorrect_Answer: {fileID: 8300000, guid: ce60d1a5baa42834bb86c49d9fb05398, type: 3}
+  Fail: {fileID: 8300000, guid: 2653c1546f4e7ab42a38663374afc45e, type: 3}
+  Book: {fileID: 8300000, guid: c0eac3d287048794891b153f8b0b1b06, type: 3}
+  Tile_clicked: {fileID: 8300000, guid: 08df3233ef552354dbc38aa9aa915640, type: 3}
 --- !u!4 &1093790333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2076596081170157495, guid: a2e5c8876fd3eda4693314cd92732455, type: 3}
@@ -7606,7 +7627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -8114,11 +8135,11 @@ Transform:
   - {fileID: 746124470}
   - {fileID: 941632191}
   - {fileID: 2076833551}
+  - {fileID: 1433458002}
+  - {fileID: 1979026936}
   - {fileID: 2106971305}
   - {fileID: 29417079}
   - {fileID: 1596410475}
-  - {fileID: 1433458002}
-  - {fileID: 1979026936}
   m_Father: {fileID: 1087595153}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9190,7 +9211,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1259195778}
-  m_RootOrder: 19
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1433458003
 MonoBehaviour:
@@ -9205,6 +9226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &1433458004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10166,7 +10188,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1271200767347877901, guid: fe3fc67179998ca48b1c1f7ec6ce2e1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -10257,6 +10279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &1607983535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10350,6 +10373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_obj: {fileID: 1141694186}
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &1660070489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10820,6 +10844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &1706049896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10931,6 +10956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &1775012330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11546,6 +11572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &1898580103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12087,7 +12114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1259195778}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979026937
 MonoBehaviour:
@@ -12102,6 +12129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &1979026938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12361,6 +12389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &2020399011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12943,6 +12972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!65 &2076833553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13325,6 +13355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClassroomUI: {fileID: 498451119}
+  ClassroomManager: {fileID: 1087595154}
 --- !u!1001 &2121221008
 PrefabInstance:
   m_ObjectHideFlags: 0

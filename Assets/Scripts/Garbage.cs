@@ -6,6 +6,7 @@ public class Garbage : MonoBehaviour
 {
     public GameObject player_obj;
     public ClassroomUI ClassroomUI;
+    public ClassroomManager ClassroomManager;
     private float radius_of_search_for_player;
     private float garbage_speed;
     
@@ -44,6 +45,7 @@ public class Garbage : MonoBehaviour
             attempts--;
             PlayerPrefs.SetInt("attempts", attempts);
             Destroy(gameObject);
+            ClassroomManager.PlaySound("garbage");
             ClassroomUI.UpdateUI(attempts);
         }
     }
