@@ -13,6 +13,7 @@ public class ClassroomManager : MonoBehaviour
     void Start() {
         is_day_over = false;
         PlayerPrefs.SetString("player_pass", "false");
+        PlayerPrefs.SetString("player_destroyed", "false");
     }
 
     void Update() {
@@ -28,6 +29,7 @@ public class ClassroomManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             end_cam.SetActive(true);
             Destroy(player);
+            PlayerPrefs.SetString("player_destroyed", "true");
             LoseScreen.Setup();
         } else if (!is_day_over && passed == "true") {
             is_day_over = true;
@@ -35,6 +37,7 @@ public class ClassroomManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             end_cam.SetActive(true);
             Destroy(player);
+            PlayerPrefs.SetString("player_destroyed", "true");
             WinScreen.Setup();
         }
     }
