@@ -4,48 +4,38 @@ using UnityEngine;
 
 public class ClassroomManager : MonoBehaviour
 {
-    private string correct_tile;
+    public GameObject player; 
+    public GameObject end_cam;
+    public WinScreen WinScreen;
+    public LoseScreen LoseScreen;
+    private bool is_day_over;
 
-    public ClassroomUI ClassroomUI;
-
-    void Start()
-    {
-        correct_tile = "TileB";
-        PlayerPrefs.SetInt("attempts", 3);
+    void Start() {
+        is_day_over = false;
+        PlayerPrefs.SetString("player_pass", "false");
     }
 
-    void Update()
-    {
+    void Update() {
+        ClassroomEnd();
     }
 
-    void OnTriggerEnter(Collider other) {
-        if (other.name == "Player") { 
-            if (gameObject.name == "HealingBook") {
-                Destroy(gameObject);
-                int attempts = PlayerPrefs.GetInt("attempts");
-                attempts++;
-                PlayerPrefs.SetInt("attempts", attempts);
-                ClassroomUI.UpdateUI(attempts);
-            } else { 
-                Renderer render = GetComponent<Renderer>();
-                string tile = gameObject.name;
-                render.material.color = Color.blue;
-                StartCoroutine(WaitForAnswer(tile, render));
-            }
+    void ClassroomEnd() {
+        int attempts = PlayerPrefs.GetInt("attempts");
+        string passed = PlayerPrefs.GetString("player_pass");
+        if (!is_day_over && attempts <= 0) {
+            is_day_over = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            end_cam.SetActive(true);
+            Destroy(player);
+            LoseScreen.Setup();
+        } else if (!is_day_over && passed == "true") {
+            is_day_over = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            end_cam.SetActive(true);
+            Destroy(player);
+            WinScreen.Setup();
         }
     }
-
-    IEnumerator WaitForAnswer(string tile, Renderer render) {
-        yield return new WaitForSeconds(2);
-        if (tile != correct_tile) {
-            render.material.color = Color.red;
-            int attempts = PlayerPrefs.GetInt("attempts");
-            attempts--;
-            PlayerPrefs.SetInt("attempts", attempts);
-            ClassroomUI.UpdateUI(attempts);
-        } else {
-            render.material.color = Color.green;
-        }
-     }
-
 }
