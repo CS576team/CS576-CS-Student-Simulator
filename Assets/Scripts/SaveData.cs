@@ -26,7 +26,7 @@ public static class SaveData
             return data;
 
         } else{
-            Debug.Log("data file not found!");
+            Debug.Log("day data file not found!");
             BinaryFormatter f = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Create);
             playerData data = new playerData();

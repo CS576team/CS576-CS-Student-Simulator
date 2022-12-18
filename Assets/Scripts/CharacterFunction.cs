@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class CharacterFunction : MonoBehaviour
 {
@@ -15,9 +17,18 @@ public class CharacterFunction : MonoBehaviour
     public int day;
     public TMP_Text day_text;
 
+    public int diff;
+    public TMP_Text diff_text;
+    
+    public bool isPF;
+
     public void LoadData(){
         playerData data = SaveData.Load();
         day = data.day;
+        diff = data.diff;
+        isPF = data.isPF;
+        
+        diff_text.text = "Diff: " +diff;
         day_text.text = "Day: " + day;
         
     }
@@ -32,10 +43,13 @@ public class CharacterFunction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(day == 0){
+        if(day == 0){ // everytime going back to the dorm we load the day data again.
             LoadData();
-        } else if (day == 6){
-            SceneManager.LoadScene("SemesterResult");
+        } else if (day == 6 ){
+            string path = "Assets/Scripts/Data/player.fun";
+            File.Delete (path);
+
+            SceneManager.LoadScene("SemesterRsult");
         }
         
     }
