@@ -9,6 +9,7 @@ public class ClassroomManager : MonoBehaviour
     public WinScreen WinScreen;
     public LoseScreen LoseScreen;
     private bool is_day_over;
+    private int grade;
 
     public AudioClip Correct_Answer;
     public AudioClip Garbage_collide;
@@ -20,6 +21,8 @@ public class ClassroomManager : MonoBehaviour
 
     void Start() {
         is_day_over = false;
+        grade = 100; // Load grade here
+        PlayerPrefs.SetInt("grade", grade);
         PlayerPrefs.SetString("player_pass", "false");
         PlayerPrefs.SetString("player_destroyed", "false");
         audioSource = gameObject.AddComponent<AudioSource>();

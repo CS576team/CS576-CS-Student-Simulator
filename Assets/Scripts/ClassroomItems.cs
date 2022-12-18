@@ -42,6 +42,9 @@ public class ClassroomItems : MonoBehaviour
             PlayerPrefs.SetInt("attempts", attempts);
             ClassroomManager.PlaySound("incorrect");
             ClassroomUI.UpdateUI(attempts);
+            int grade = PlayerPrefs.GetInt("grade");
+            grade -= 5;
+            PlayerPrefs.SetInt("grade", grade);
         } else {
             render.material.color = Color.green;
             PlayerPrefs.SetString("player_pass", "true"); 

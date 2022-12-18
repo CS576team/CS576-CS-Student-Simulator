@@ -45,6 +45,9 @@ public class Garbage : MonoBehaviour
             attempts--;
             PlayerPrefs.SetInt("attempts", attempts);
             Destroy(gameObject);
+            int grade = PlayerPrefs.GetInt("grade");
+            grade -= 5;
+            PlayerPrefs.SetInt("grade", grade);
             ClassroomManager.PlaySound("garbage");
             ClassroomUI.UpdateUI(attempts);
         }
