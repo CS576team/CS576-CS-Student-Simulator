@@ -9,7 +9,8 @@ public class ClassroomItems : MonoBehaviour
     private string correct_tile;
 
     void Start() {
-        correct_tile = "TileB";
+        string answer = PlayerPrefs.GetString("answer_tile");
+        correct_tile = answer;
         PlayerPrefs.SetInt("attempts", 3);
     }
 
