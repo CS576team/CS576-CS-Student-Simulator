@@ -14,12 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dorm.unity
     guid: 4e4aa0a37831112448093cef958c7779
-  - enabled: 1
-    path: Assets/Scenes/Classroom.unity
+  - enabled: 0
+    path: Assets/Scenes/ClassroomTest.unity
     guid: c10c5d528a6a541f38be57d51308394f
   - enabled: 1
     path: Assets/Scenes/ExamRoom.unity
     guid: 7d212eb0584d94168b7211545dcc7f03
+  - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: 713e4c64bd371466881f48bb76fb9cff
   - enabled: 1
     path: Assets/Scenes/SemesterResult.unity
     guid: 25efc1f0b51e440ab8f40092be9c987c

@@ -33,11 +33,16 @@ public class SceneSwitch : MonoBehaviour
         playerData data = SaveData.Load();
         return data.day; 
     }
+    public int LoadGradeData(){
+        playerData data = SaveData.Load();
+        return data.grade; 
+    }
     public void LoadPlayerData(){
         playerData data = SaveData.Load();
         day = data.day;
         diff = data.diff;
         isPF = data.isPF;
+        grade = data.grade;
     }
     
     void Start(){
@@ -102,6 +107,7 @@ public class SceneSwitch : MonoBehaviour
             Debug.Log("scene:"+cf.msg); 
             if(cf.msg == "Classroom" || cf.msg == "ExamRoom" ){
                 day = LoadDayData() +1;
+                grade = LoadGradeData();
             }
             else if(cf.msg == "Computer" ){
                 day = LoadDayData();

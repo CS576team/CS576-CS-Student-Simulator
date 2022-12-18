@@ -21,13 +21,15 @@ public class CharacterFunction : MonoBehaviour
     public TMP_Text diff_text;
     
     public bool isPF;
+    public int grade;
 
     public void LoadData(){
         playerData data = SaveData.Load();
         day = data.day;
         diff = data.diff;
         isPF = data.isPF;
-        
+        grade = data.grade;
+       
         diff_text.text = "Diff: " +diff;
         day_text.text = "Day: " + day;
         
@@ -38,14 +40,15 @@ public class CharacterFunction : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(day == 0){ // everytime going back to the dorm we load the day data again.
-            LoadData();
-        } else if (day == 6 ){
+         // everytime going back to the dorm we load the day data again.
+        LoadData();
+        if (day == 6 ){
             string path = "Assets/Scripts/Data/player.fun";
             File.Delete (path);
 
@@ -55,6 +58,7 @@ public class CharacterFunction : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) {
         Debug.Log(other.gameObject.name);
+        
         if (other.gameObject.name == "OfficeChair"){
             msg = "Computer";
             confirm_text.text = "Start Studying";
@@ -62,8 +66,9 @@ public class CharacterFunction : MonoBehaviour
             no.SetActive(true);
         }
         else if (other.gameObject.name == "Door"){
+            Debug.Log("day checking from CF: "+ day);
             msg = "Classroom";
-            if(day != 0 && day % 3 == 0){
+            if(day != 0 && (day +1)% 3 == 0){
                 msg = "ExamRoom";
             }
             confirm_text.text = "Leave Dorm";
