@@ -6,11 +6,8 @@ public class ClassroomItems : MonoBehaviour
 {
     public ClassroomUI ClassroomUI;
     public ClassroomManager ClassroomManager;
-    private string correct_tile;
 
     void Start() {
-        string answer = PlayerPrefs.GetString("answer_tile");
-        correct_tile = answer;
         PlayerPrefs.SetInt("attempts", 3);
     }
 
@@ -26,6 +23,7 @@ public class ClassroomItems : MonoBehaviour
             } else { 
                 Renderer render = GetComponent<Renderer>();
                 string tile = gameObject.name;
+                Debug.Log("tile being stepped on: " + tile);
                 render.material.color = Color.blue;
                 ClassroomManager.PlaySound("tile");
                 StartCoroutine(WaitForAnswer(tile, render));
@@ -35,7 +33,9 @@ public class ClassroomItems : MonoBehaviour
 
     IEnumerator WaitForAnswer(string tile, Renderer render) {
         yield return new WaitForSeconds(2);
-        if (tile != correct_tile) {
+        Debug.Log("Stepped on tile: " + tile);
+        Debug.Log("Correct tile: "+ PlayerPrefs.GetString("answer_tile"));
+        if (tile != PlayerPrefs.GetString("answer_tile")) {
             render.material.color = Color.red;
             int attempts = PlayerPrefs.GetInt("attempts");
             attempts--;

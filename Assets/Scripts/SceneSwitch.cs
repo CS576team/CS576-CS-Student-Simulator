@@ -108,13 +108,15 @@ public class SceneSwitch : MonoBehaviour
             if(cf.msg == "Classroom" || cf.msg == "ExamRoom" ){
                 day = LoadDayData() +1;
                 grade = LoadGradeData();
+                savePlayerData();
             }
             else if(cf.msg == "Computer" ){
                 day = LoadDayData();
+                savePlayerData();
             }
             SceneManager.LoadScene(cf.msg);
         }
-        savePlayerData();
+        
         yes.SetActive(false);
         no.SetActive(false); 
     }

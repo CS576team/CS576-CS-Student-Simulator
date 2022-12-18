@@ -51,10 +51,12 @@ public class Questions : MonoBehaviour
         + "D) extends, implements";
         answers[4] = "TileD";
         questions[5] = "Exam day 2";
+        answers[5] = "Exam";
         LoadQuestions();
     }
 
     void LoadQuestions() {
+        LoadDayData();
         question_text.GetComponent<TextMeshPro>().text = questions[day - 1];
         PlayerPrefs.SetString("answer_tile", answers[day - 1]);
         Debug.Log(questions[day-1]);

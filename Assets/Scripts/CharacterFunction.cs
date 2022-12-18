@@ -31,7 +31,7 @@ public class CharacterFunction : MonoBehaviour
         grade = data.grade;
        
         diff_text.text = "Diff: " +diff;
-        day_text.text = "Day: " + day;
+        day_text.text = "Day: " + (day+1);
         
     }
     
@@ -51,8 +51,7 @@ public class CharacterFunction : MonoBehaviour
         if (day == 6 ){
             string path = "Assets/Scripts/Data/player.fun";
             File.Delete (path);
-
-            SceneManager.LoadScene("SemesterRsult");
+            SceneManager.LoadScene("SemesterResult");
         }
         
     }
@@ -68,7 +67,7 @@ public class CharacterFunction : MonoBehaviour
         else if (other.gameObject.name == "Door"){
             Debug.Log("day checking from CF: "+ day);
             msg = "Classroom";
-            if(day != 0 && (day +1)% 3 == 0){
+            if(day != 0 && (day+1) % 3 == 0){
                 msg = "ExamRoom";
             }
             confirm_text.text = "Leave Dorm";
