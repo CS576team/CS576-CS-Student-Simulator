@@ -12,7 +12,7 @@ public class Garbage : MonoBehaviour
     
     void Start() {
         garbage_speed = 3.2f;
-        radius_of_search_for_player = 5.0f;
+        radius_of_search_for_player = 10.0f;
     }
 
     void Update() {
