@@ -17,7 +17,6 @@ public class WinScreen : MonoBehaviour
     void ProcessButton() {
         // Go back to dorm, Load dorm scene below
         Debug.Log("Going back to dorm...");
-        // ss.saveGrade();
 
     }
 

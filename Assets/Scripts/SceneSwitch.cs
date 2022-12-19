@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 public class SceneSwitch : MonoBehaviour
 {
@@ -25,6 +24,8 @@ public class SceneSwitch : MonoBehaviour
     public TMP_Text diff_text;
 
     public int grade;
+    public GameObject directionPanel;
+
 
     public void savePlayerData(){
         SaveData.SavePlayer(this);
@@ -53,6 +54,11 @@ public class SceneSwitch : MonoBehaviour
     void Start(){
         LoadPlayerData();
         Debug.Log("data checking from sceneSwitch: day: "+ day+ " grade: "+ grade + " diff: "+ diff);
+    }
+    public void noDirection(){
+        isPF = true;
+        directionPanel.SetActive(false);
+        savePlayerData();
     }
 
     
@@ -114,7 +120,8 @@ public class SceneSwitch : MonoBehaviour
     public void confirmBox(string msg){
         Debug.Log("confirmbox appeared!");
         if (msg == "yes"){
-            Debug.Log("scene:"+cf.msg); 
+            Debug.Log("scene:"+cf.msg);
+            
             if(cf.msg == "Classroom" || cf.msg == "ExamRoom" ){
                 day = LoadDayData() +1;
                 grade = LoadGradeData();

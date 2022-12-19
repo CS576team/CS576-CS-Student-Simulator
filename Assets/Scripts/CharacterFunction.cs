@@ -23,6 +23,11 @@ public class CharacterFunction : MonoBehaviour
     public bool isPF;
     public int grade;
 
+    public AudioClip open; 
+    private AudioSource aS;
+
+    public GameObject directionPanel;
+
     public void LoadData(){
         playerData data = SaveData.Load();
         day = data.day;
@@ -40,6 +45,10 @@ public class CharacterFunction : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        aS = gameObject.GetComponent<AudioSource>();
+        playerData pd = SaveData.Load();
+        Debug.Log("CF check: pd.isPF = "+ pd.isPF);
+        if(pd.isPF == false){directionPanel.SetActive(true);} else{directionPanel.SetActive(false);}
         
     }
 
@@ -48,9 +57,8 @@ public class CharacterFunction : MonoBehaviour
     {
          // everytime going back to the dorm we load the day data again.
         LoadData();
-        if (day == 7){
-            string path = "Assets/Scripts/Data/player.fun";
-            File.Delete (path);
+        
+        if (day == 7){  
             SceneManager.LoadScene("SemesterResult");
         }
         
@@ -73,6 +81,9 @@ public class CharacterFunction : MonoBehaviour
             confirm_text.text = "Leave Dorm";
             yes.SetActive(true);
             no.SetActive(true);
+                            
+            aS.clip = open; 
+            aS.Play();
         }
     }
     

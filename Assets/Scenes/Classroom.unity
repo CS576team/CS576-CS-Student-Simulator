@@ -3686,7 +3686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498451120}
-  - component: {fileID: 498451119}
   - component: {fileID: 498451121}
   m_Layer: 0
   m_Name: UIManager
@@ -3695,18 +3694,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &498451119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498451118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1af6cd5ec78fd4ba762446fa22e603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &498451120
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5080,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   diff_text: {fileID: 0}
   grade: 0
+  directionPanel: {fileID: 0}
 --- !u!1 &673550046
 GameObject:
   m_ObjectHideFlags: 0
@@ -7988,7 +7976,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087595153}
-  - component: {fileID: 1087595154}
   - component: {fileID: 1087595155}
   m_Layer: 0
   m_Name: Classroom
@@ -8020,18 +8007,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1087595154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087595152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c07f04a911623c947bcee7f57f6749be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1087595155
 MonoBehaviour:
   m_ObjectHideFlags: 0
