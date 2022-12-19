@@ -9,8 +9,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Material
   m_Shader: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - OUTLINE_ON
   - UNDERLAY_ON
@@ -21,7 +19,6 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -42,7 +39,7 @@ Material:
     - _PerspectiveFilter: 0.875
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 1
-    - _ScaleRatioC: 0.37469637
+    - _ScaleRatioC: 0.37469634
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -94,6 +91,7 @@ MonoBehaviour:
     m_StyleName: Regular
     m_PointSize: 86
     m_Scale: 1
+    m_UnitsPerEM: 0
     m_LineHeight: 98.8916
     m_AscentLine: 77.853516
     m_CapLine: 59
