@@ -41,7 +41,12 @@ public class screen : MonoBehaviour
                         + "C) for (int i = 0; i < n; i++) { }" + "\n"
                         + "D) for (i < n; i++; int i = 0) { }";
                     
-        questions[2] = "Exam day 1";
+        questions[2] = "Multiline comment is created using ___."+"\n"
+                        + "A) //" + "\n"  
+                        + "B) /* */" + "\n"  
+                        + "C) <!--  -- >"+ "\n" 
+                        + "D) All of these" + "\n"; 
+
     
         questions[3] = "Stacks follow the __ principle, while Queues follow the __ principle." + "\n"
                         + "A) LIFO, FIFO" + "\n" 
@@ -55,8 +60,11 @@ public class screen : MonoBehaviour
                         + "C) implement, extend" + "\n"
                         + "D) extends, implements";
         
-        questions[5] = "Exam day 2";
-       
+        questions[5] = "Which keyword in java is used for exception handling?" + "\n"
+                        + "A) exep" + "\n" 
+                        + "B) excepHand" + "\n"
+                        + "C) throw" + "\n"
+                        + "D) All of these";
     }
 
     public void panelSwitch(){
