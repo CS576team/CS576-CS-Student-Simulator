@@ -18,6 +18,7 @@ public class SceneSwitch : MonoBehaviour
 
     public TMP_Text PF_text;
     public bool isPF;
+    public bool isRead;
 
     public int diff;//goal grade
     public Slider slider;
@@ -49,6 +50,7 @@ public class SceneSwitch : MonoBehaviour
         diff = data.diff;
         isPF = data.isPF;
         grade = data.grade;
+        isRead = data.isRead;
     }
     
     void Start(){
@@ -56,7 +58,7 @@ public class SceneSwitch : MonoBehaviour
         Debug.Log("data checking from sceneSwitch: day: "+ day+ " grade: "+ grade + " diff: "+ diff);
     }
     public void noDirection(){
-        isPF = true;
+        isRead = true;
         directionPanel.SetActive(false);
         savePlayerData();
     }
@@ -71,8 +73,6 @@ public class SceneSwitch : MonoBehaviour
         } else if(scenename == "Menu"){
             string path = "Assets/Scripts/Data/player.fun";
             File.Delete (path);
-        } else if (scenename == "Dorm"){
-            //saveGrade();
         }
 
         SceneManager.LoadScene(scenename);
@@ -92,9 +92,27 @@ public class SceneSwitch : MonoBehaviour
     }
 
     public void pfConfirm(){
-        isPF = true;
-        diff = 60;
-        PF_text.text = "You have chosen P/F as your passing garde.";
+        LoadPlayerData();
+        if (day <=3 && isPF == false){
+            isPF = true;
+            diff = 59;
+            PF_text.text = "You have chosen P/F as your passing garde.";
+        } else if (day > 3){
+            string letter = "";
+            if (diff== 70){
+                letter = "C";
+            }  else if (diff == 80){
+                letter = "B";
+            } else if (diff == 90){
+                letter = "A";
+            } else if (diff == 60){
+                letter = "D";
+            }else {
+                letter = "P/F";
+            }
+            PF_text.text = "You have passed the P/F deadline. You have chosen "+ letter+ " as your passing garde.";
+        }
+        
         savePlayerData();
     }
 

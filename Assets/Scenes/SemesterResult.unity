@@ -391,10 +391,12 @@ MonoBehaviour:
   day: 0
   PF_text: {fileID: 0}
   isPF: 0
+  isRead: 0
   diff: 0
   slider: {fileID: 0}
   diff_text: {fileID: 0}
   grade: 0
+  directionPanel: {fileID: 0}
 --- !u!114 &803317786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   result_text: {fileID: 1279055941}
+  honor_text: {fileID: 1414578324}
   passing: {fileID: 8300000, guid: c4134680d24e44b31a3805e7798d6013, type: 3}
   fail: {fileID: 8300000, guid: 7a17995fd8ace45529237ac0c05d8b78, type: 3}
 --- !u!82 &1046472806

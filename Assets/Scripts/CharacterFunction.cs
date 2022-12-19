@@ -47,8 +47,8 @@ public class CharacterFunction : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         aS = gameObject.GetComponent<AudioSource>();
         playerData pd = SaveData.Load();
-        Debug.Log("CF check: pd.isPF = "+ pd.isPF);
-        if(pd.isPF == false){directionPanel.SetActive(true);} else{directionPanel.SetActive(false);}
+        Debug.Log("CF check: pd.isRead = "+ pd.isRead);
+        if(pd.isRead == false){directionPanel.SetActive(true);} else{directionPanel.SetActive(false);}
         
     }
 

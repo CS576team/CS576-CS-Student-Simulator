@@ -21,14 +21,19 @@ public class resultScene : MonoBehaviour
         playerData pd = SaveData.Load();
         aS = gameObject.GetComponent<AudioSource>();
         
-        if(pd.grade >= pd.diff){
+        if(pd.grade >= pd.diff && pd.isPF == false){
             aS.clip = passing;
-            panel_color.color = Color.green;
+            panel_color.color = new Color((float)0.900,(float)1.000,(float)0.800);
             result_text.text = "You pass the Class!";
             honor_text.text = "YOU PASSED THE CLASS WITH YOUR DESIRED PASSING GRADE!!!";
-        } else {
+        } else if(pd.grade >= pd.diff && pd.isPF == true){
+            aS.clip = passing;
+            panel_color.color = Color.yellow;
+            result_text.text = "Restart! \n Get a better grade!";
+            honor_text.text = "YOU PASSED THE CLASS !!!";
+        }else {
             aS.clip = fail;
-            panel_color.color = Color.red;
+            panel_color.color = Color.magenta;
             result_text.text = "Sorry! you failed the class!";
             honor_text.text = "";
         }

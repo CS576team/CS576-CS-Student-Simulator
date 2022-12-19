@@ -1198,6 +1198,7 @@ MonoBehaviour:
   day: 0
   PF_text: {fileID: 1530741925}
   isPF: 0
+  isRead: 0
   diff: 0
   slider: {fileID: 0}
   diff_text: {fileID: 0}
@@ -1224,6 +1225,7 @@ MonoBehaviour:
   dayzerotext: {fileID: 1952355575}
   gradetext: {fileID: 1166593367}
   advisor_text: {fileID: 2049096826}
+  chosen_text: {fileID: 1530741925}
   qd: {fileID: 168693625}
   questions: []
   days: []
@@ -1571,13 +1573,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1530741924}
+  - {fileID: 2039992483}
   m_Father: {fileID: 802582873}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129.99998, y: 45.99997}
+  m_AnchoredPosition: {x: 129.99998, y: -21}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446732332
@@ -2601,6 +2603,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1390840881}
+  - {fileID: 1530741924}
   - {fileID: 446732331}
   m_Father: {fileID: 103288687}
   m_RootOrder: -1
@@ -4674,14 +4677,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2039992483}
-  m_Father: {fileID: 446732331}
+  m_Children: []
+  m_Father: {fileID: 802582873}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -129.99998, y: -45.999985}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530741925
@@ -4767,7 +4769,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 128.67908, y: -179.7525, z: -342.71338, w: 120.731384}
+  m_margin: {x: 128.67908, y: -214.51654, z: -412.94714, w: 70.691376}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5727,12 +5729,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 602519058}
-  m_Father: {fileID: 1530741924}
+  m_Father: {fileID: 446732331}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 444, y: -10}
+  m_AnchoredPosition: {x: 314, y: -55.999985}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039992484

@@ -15,6 +15,7 @@ public class screen : MonoBehaviour
     public TMP_Text dayzerotext;
     public TMP_Text gradetext;
     public TMP_Text advisor_text;
+    public TMP_Text chosen_text;
 
     public Dropdown qd;
 
@@ -45,9 +46,8 @@ public class screen : MonoBehaviour
                         + "A) //" + "\n"  
                         + "B) /* */" + "\n"  
                         + "C) <!--  -- >"+ "\n" 
-                        + "D) All of these" + "\n"; 
+                        + "D) All of these" + "\n"; //B
 
-    
         questions[3] = "Stacks follow the __ principle, while Queues follow the __ principle." + "\n"
                         + "A) LIFO, FIFO" + "\n" 
                         + "B) Array, List" + "\n"
@@ -63,20 +63,20 @@ public class screen : MonoBehaviour
         questions[5] = "Which keyword in java is used for exception handling?" + "\n"
                         + "A) exep" + "\n" 
                         + "B) excepHand" + "\n"
-                        + "C) throw" + "\n"
-                        + "D) All of these";
+                        + "C) throw" + "\n" 
+                        + "D) All of these";//C
     }
 
     public void panelSwitch(){
         Debug.Log(dd.value);
         playerData pd = SaveData.Load();
         if(dd.value == 0){
-            defaultPanel.SetActive(true);
+            defaultPanel.SetActive(true);//default
             grade.SetActive(false);
             requirement.SetActive(false);
             review.SetActive(false);
             rules.SetActive(false);
-        } else if (dd.value == 1){
+        } else if (dd.value == 1){//grade
             defaultPanel.SetActive(false);
             grade.SetActive(true);
             requirement.SetActive(false);
@@ -88,13 +88,30 @@ public class screen : MonoBehaviour
             } else if (pd.grade <= pd.diff){
                 advisor_text.text = "Adisor Comment: You need to work harder!";
             }
-        } else if (dd.value == 2){
+        } else if (dd.value == 2){//requirement
             defaultPanel.SetActive(false);
             grade.SetActive(false);
             requirement.SetActive(true);
             review.SetActive(false);
             rules.SetActive(false);
-        } else if (dd.value == 3){
+            string letter = "";
+            if (pd.diff== 70){
+                letter = "C";
+            }  else if (pd.diff == 80){
+                letter = "B";
+            } else if (pd.diff == 90){
+                letter = "A";
+            } else {
+                letter = "D";
+            } 
+            if (pd.isPF == true){
+                chosen_text.text = "You have chosen P/F as your passing garde.";
+            } else{
+                chosen_text.text = "You have picked "+ letter +" as your passing grade.";
+            }
+            
+            
+        } else if (dd.value == 3){//review
             defaultPanel.SetActive(false);
             grade.SetActive(false);
             requirement.SetActive(false);
@@ -113,11 +130,11 @@ public class screen : MonoBehaviour
                 Debug.Log("d: "+d);
                 Debug.Log("questions["+d+"]: "+ days[d]);
                 list.Add(days[d]);
-
+                
             }
             qd.AddOptions(list);
             
-        } else if (dd.value == 4){
+        } else if (dd.value == 4){//rules
             defaultPanel.SetActive(false);
             grade.SetActive(false);
             requirement.SetActive(false);
