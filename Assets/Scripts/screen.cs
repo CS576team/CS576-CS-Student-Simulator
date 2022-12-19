@@ -12,9 +12,11 @@ public class screen : MonoBehaviour
     public GameObject review;
     public GameObject rules;
     public TMP_Text dayzerotext;
+    public TMP_Text gradetext;
 
     public void panelSwitch(){
         Debug.Log(dd.value);
+        playerData pd = SaveData.Load();
         if(dd.value == 0){
             defaultPanel.SetActive(true);
             grade.SetActive(false);
@@ -27,6 +29,7 @@ public class screen : MonoBehaviour
             requirement.SetActive(false);
             review.SetActive(false);
             rules.SetActive(false);
+            gradetext.text = "Your current grade is: " + pd.grade;  
         } else if (dd.value == 2){
             defaultPanel.SetActive(false);
             grade.SetActive(false);
@@ -38,20 +41,19 @@ public class screen : MonoBehaviour
             grade.SetActive(false);
             requirement.SetActive(false);
             review.SetActive(true);
-            playerData pd = SaveData.Load();
+            rules.SetActive(false);
             Debug.Log("pd.day = "+ pd.day);
+            dayzerotext.text = "";
             if(pd.day == 0){
                 dayzerotext.text = "You haven't taken any classes yet!"+"\nPlaese go to class first!";
-            } else{
-                dayzerotext.text = "";
             }
             
         } else if (dd.value == 4){
             defaultPanel.SetActive(false);
             grade.SetActive(false);
             requirement.SetActive(false);
-            review.SetActive(true);
-            rules.SetActive(false);
+            review.SetActive(false);
+            rules.SetActive(true);
         }
     }
 }

@@ -8,6 +8,7 @@ public class WinScreen : MonoBehaviour
 {
     public Button back_to_dorm;
     public TextMeshProUGUI grade_text;
+    //private SceneSwitch ss;
 
     void Start() {
         back_to_dorm.onClick.AddListener(ProcessButton);
@@ -16,6 +17,8 @@ public class WinScreen : MonoBehaviour
     void ProcessButton() {
         // Go back to dorm, Load dorm scene below
         Debug.Log("Going back to dorm...");
+        // ss.saveGrade();
+
     }
 
     public void Setup() {

@@ -37,6 +37,11 @@ public class SceneSwitch : MonoBehaviour
         playerData data = SaveData.Load();
         return data.grade; 
     }
+    public void saveGrade(){
+        grade = PlayerPrefs.GetInt("grade");
+        Debug.Log("Saving grade from classroom: " + grade);
+        savePlayerData();
+    }
     public void LoadPlayerData(){
         playerData data = SaveData.Load();
         day = data.day;
@@ -47,7 +52,9 @@ public class SceneSwitch : MonoBehaviour
     
     void Start(){
         LoadPlayerData();
+        Debug.Log("data checking from sceneSwitch: day: "+ day+ " grade: "+ grade + " diff: "+ diff);
     }
+
     
     public void switchScene(string scenename)
     {
@@ -55,10 +62,13 @@ public class SceneSwitch : MonoBehaviour
         if (scenename == "Computer"){
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-        } if(scenename == "Menu"){
+        } else if(scenename == "Menu"){
             string path = "Assets/Scripts/Data/player.fun";
             File.Delete (path);
+        } else if (scenename == "Dorm"){
+            //saveGrade();
         }
+
         SceneManager.LoadScene(scenename);
     }
 

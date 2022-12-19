@@ -13,7 +13,7 @@ public class playerData
     
 
     public playerData(SceneSwitch ss){
-        Debug.Log("playerData: ss.day = " +ss.day + " ss.diff = " + ss.diff+ "grade: "+ grade);
+        Debug.Log("playerData: ss.day = " +ss.day + " ss.diff = " + ss.diff+ " grade: "+ grade);
         day = ss.day;
         diff = ss.diff;
         grade = ss.grade;
@@ -26,7 +26,7 @@ public class playerData
         grade = 100;
         diff = 60;
         isPF = false;
-        Debug.Log("playerData: Init day = "+day+ " grade = "+ grade);
+        Debug.Log("playerData: Init |day = "+day+ " |diff = "+ diff + " |grade = "+ grade);
         
     }
 }

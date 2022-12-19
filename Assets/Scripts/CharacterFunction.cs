@@ -48,7 +48,7 @@ public class CharacterFunction : MonoBehaviour
     {
          // everytime going back to the dorm we load the day data again.
         LoadData();
-        if (day == 6 ){
+        if (day == 7){
             string path = "Assets/Scripts/Data/player.fun";
             File.Delete (path);
             SceneManager.LoadScene("SemesterResult");

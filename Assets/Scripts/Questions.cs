@@ -59,7 +59,7 @@ public class Questions : MonoBehaviour
         LoadDayData();
         question_text.GetComponent<TextMeshPro>().text = questions[day - 1];
         PlayerPrefs.SetString("answer_tile", answers[day - 1]);
-        Debug.Log(questions[day-1]);
-        Debug.Log(PlayerPrefs.GetString("answer_tile"));
+        // Debug.Log(questions[day-1]);
+        // Debug.Log(PlayerPrefs.GetString("answer_tile"));
     }
 }

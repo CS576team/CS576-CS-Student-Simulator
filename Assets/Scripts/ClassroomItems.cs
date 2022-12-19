@@ -33,8 +33,9 @@ public class ClassroomItems : MonoBehaviour
 
     IEnumerator WaitForAnswer(string tile, Renderer render) {
         yield return new WaitForSeconds(2);
-        Debug.Log("Stepped on tile: " + tile);
-        Debug.Log("Correct tile: "+ PlayerPrefs.GetString("answer_tile"));
+        // Debug.Log("Stepped on tile: " + tile);
+        // Debug.Log("Correct tile: "+ PlayerPrefs.GetString("answer_tile"));
+        playerData data = SaveData.Load();
         if (tile != PlayerPrefs.GetString("answer_tile")) {
             render.material.color = Color.red;
             int attempts = PlayerPrefs.GetInt("attempts");
@@ -42,7 +43,8 @@ public class ClassroomItems : MonoBehaviour
             PlayerPrefs.SetInt("attempts", attempts);
             ClassroomManager.PlaySound("incorrect");
             ClassroomUI.UpdateUI(attempts);
-            int grade = PlayerPrefs.GetInt("grade");
+            //int grade = PlayerPrefs.GetInt("grade");
+            int grade = data.grade;
             grade -= 5;
             PlayerPrefs.SetInt("grade", grade);
         } else {
