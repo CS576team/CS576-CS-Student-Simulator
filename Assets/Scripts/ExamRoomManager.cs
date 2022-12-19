@@ -44,6 +44,7 @@ public class ExamRoomManager : MonoBehaviour
     void ExamroomEnd(float t) {
         string passed = PlayerPrefs.GetString("player_pass");
         if (t <= 0.0f && !is_day_over || caught) {
+            // grade subtract 20
             is_day_over = true;
             audioSource.clip = Fail;
             audioSource.Play();
