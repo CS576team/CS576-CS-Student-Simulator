@@ -12,8 +12,10 @@ public class ExamRoomManager : MonoBehaviour
     public ExamFailScreen LoseScreen;
     private bool is_day_over;
     public bool caught;
-    public float start_time = 80.0f;
+    public float start_time;
     public TextMeshProUGUI time_text;
+    
+    public int grade;
 
     public AudioClip Correct_Answer;
     public AudioClip Incorrect_Answer;
@@ -24,13 +26,15 @@ public class ExamRoomManager : MonoBehaviour
     void Start() {
         is_day_over = false;
         caught = false;
+        start_time = 80.0f;
         PlayerPrefs.SetString("player_pass", "false");
         PlayerPrefs.SetString("player_destroyed", "false");
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update() {
-        float t = start_time - Time.time;
+
+        float t = start_time - Time.timeSinceLevelLoad;
         if (t < 0.0f || is_day_over) {
             t = 0.0f;
         }
@@ -45,6 +49,10 @@ public class ExamRoomManager : MonoBehaviour
         string passed = PlayerPrefs.GetString("player_pass");
         if (t <= 0.0f && !is_day_over || caught) {
             // grade subtract 20
+            playerData pd = SaveData.Load();
+            grade = pd.grade;
+            grade -=20;
+            PlayerPrefs.SetInt("grade", grade);
             is_day_over = true;
             audioSource.clip = Fail;
             audioSource.Play();

@@ -595,6 +595,18 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 854181123}
         m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: startExam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 854181123}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
         m_MethodName: savePlayerData
         m_Mode: 1
         m_Arguments:
@@ -1530,11 +1542,14 @@ MonoBehaviour:
   day: 0
   PF_text: {fileID: 0}
   isPF: 0
+  isRead: 0
   diff: 0
   slider: {fileID: 0}
   diff_text: {fileID: 0}
   grade: 0
   directionPanel: {fileID: 1695137869}
+  isStart: 0
+  isStart2: 0
 --- !u!82 &854181124
 AudioSource:
   m_ObjectHideFlags: 0

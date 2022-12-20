@@ -77,6 +77,9 @@ public class CharacterFunction : MonoBehaviour
             msg = "Classroom";
             if(day != 0 && (day+1) % 3 == 0){
                 msg = "ExamRoom";
+                if((day+1) == 6){
+                    msg = "ExamRoom2";
+                }
             }
             confirm_text.text = "Leave Dorm";
             yes.SetActive(true);

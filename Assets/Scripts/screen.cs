@@ -24,7 +24,7 @@ public class screen : MonoBehaviour
     public TMP_Text question_text;
 
     void Start() {
-        questions = new string[6];
+        questions = new string[7];
         days = new string[6];
         for (int a = 0; a < 6; a++){
             days[a] = "day "+ (a+1).ToString();
@@ -85,9 +85,9 @@ public class screen : MonoBehaviour
             rules.SetActive(false);
             gradetext.text = "Your current grade is: " + pd.grade;
             if (pd.grade <= pd.diff && pd.day < 4){
-                advisor_text.text = "Adisor Comment: You need to work harder! Maybe consider P/F option before day 4?"; 
+                advisor_text.text = "Advisor Comment: You need to work harder! Maybe consider P/F option before day 4?"; 
             } else if (pd.grade <= pd.diff){
-                advisor_text.text = "Adisor Comment: You need to work harder!";
+                advisor_text.text = "Advisor Comment: You need to work harder!";
             }
         } else if (dd.value == 2){//requirement
             defaultPanel.SetActive(false);

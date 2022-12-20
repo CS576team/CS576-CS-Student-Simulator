@@ -27,7 +27,6 @@ public class SceneSwitch : MonoBehaviour
     public int grade;
     public GameObject directionPanel;
 
-
     public void savePlayerData(){
         SaveData.SavePlayer(this);
     }
@@ -44,6 +43,7 @@ public class SceneSwitch : MonoBehaviour
         Debug.Log("Saving grade from classroom: " + grade);
         savePlayerData();
     }
+
     public void LoadPlayerData(){
         playerData data = SaveData.Load();
         day = data.day;
@@ -52,6 +52,7 @@ public class SceneSwitch : MonoBehaviour
         grade = data.grade;
         isRead = data.isRead;
     }
+
     
     void Start(){
         LoadPlayerData();
@@ -140,7 +141,7 @@ public class SceneSwitch : MonoBehaviour
         if (msg == "yes"){
             Debug.Log("scene:"+cf.msg);
             
-            if(cf.msg == "Classroom" || cf.msg == "ExamRoom" ){
+            if(cf.msg == "Classroom" || cf.msg == "ExamRoom" || cf.msg == "ExamRoom2" ){
                 day = LoadDayData() +1;
                 grade = LoadGradeData();
                 savePlayerData();
@@ -149,6 +150,7 @@ public class SceneSwitch : MonoBehaviour
                 day = LoadDayData();
                 savePlayerData();
             }
+
             SceneManager.LoadScene(cf.msg);
         }
         

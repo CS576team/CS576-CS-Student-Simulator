@@ -11,7 +11,6 @@ public class playerData
     public int diff;
     public bool isPF;
     public bool isRead;
-    
 
     public playerData(SceneSwitch ss){
         Debug.Log("playerData: ss.day = " +ss.day + " ss.diff = " + ss.diff+ " grade: "+ grade);
@@ -20,7 +19,6 @@ public class playerData
         grade = ss.grade;
         isPF = ss.isPF;
         isRead = ss.isRead;
-        
     }
     public playerData(){//default
         //Debug.Log("playerData: Init day = 0 grade = 100 ");
