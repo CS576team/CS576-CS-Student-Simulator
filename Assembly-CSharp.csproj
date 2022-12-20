@@ -50,6 +50,12 @@
      <Compile Include="Assets/Scripts/WinScreen.cs" />
      <Compile Include="Assets/Scripts/Questions.cs" />
      <Compile Include="Assets/Scripts/resultScene.cs" />
+     <Compile Include="Assets/Scripts/ExamRoomManager.cs" />
+     <Compile Include="Assets/Scripts/ExamRoomFunc.cs" />
+     <Compile Include="Assets/Scripts/ExamFailScreen.cs" />
+     <Compile Include="Assets/Scripts/ExamRoomUI.cs" />
+     <Compile Include="Assets/Scripts/ExamPassScreen.cs" />
+     <Compile Include="Assets/Scripts/Teacher.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
