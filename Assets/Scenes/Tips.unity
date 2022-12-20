@@ -488,6 +488,14 @@ MonoBehaviour:
   cf: {fileID: 0}
   day_text: {fileID: 0}
   day: 0
+  PF_text: {fileID: 0}
+  isPF: 0
+  isRead: 0
+  diff: 0
+  slider: {fileID: 0}
+  diff_text: {fileID: 0}
+  grade: 0
+  directionPanel: {fileID: 0}
 --- !u!1 &1735792646
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,10 +640,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Make it to the end of the semester with a passing grade!
 
-    Each Smester
+    Each Semester
     has 6 days!
 
-    The pasing grade is 60!!!!!!'
+    The passing grade is 60!!!!!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -834,6 +842,14 @@ MonoBehaviour:
   cf: {fileID: 0}
   day_text: {fileID: 0}
   day: 0
+  PF_text: {fileID: 0}
+  isPF: 0
+  isRead: 0
+  diff: 0
+  slider: {fileID: 0}
+  diff_text: {fileID: 0}
+  grade: 0
+  directionPanel: {fileID: 0}
 --- !u!1 &1844922938
 GameObject:
   m_ObjectHideFlags: 0
