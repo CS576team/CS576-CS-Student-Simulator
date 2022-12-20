@@ -30,37 +30,38 @@ public class screen : MonoBehaviour
             days[a] = "day "+ (a+1).ToString();
 
         }
-        questions[0] = "How do you print " + "\"Hello World\"" + " in Java?" + "\n"
+        questions[0] = "Hello! Student please pick the question that you want to review!";
+        questions[1] = "How do you print " + "\"Hello World\"" + " in Java?" + "\n"
                         + "A) console.log(\"Hello World\")" + "\n" 
                         + "B) System.out.println(\"Hello World\");" + "\n"
                         + "C) print(\"Hello World\")" + "\n"
                         + "D) Debug.Log(\"Hello World\");";
     
-        questions[1] = "What is the correct syntax for a for loop in Java?" + "\n"
+        questions[2] = "What is the correct syntax for a for loop in Java?" + "\n"
                         + "A) for i in arr:" + "\n" 
                         + "B) for (let i = 0; i < n; i++) { }" + "\n"
                         + "C) for (int i = 0; i < n; i++) { }" + "\n"
                         + "D) for (i < n; i++; int i = 0) { }";
                     
-        questions[2] = "Multiline comment is created using ___."+"\n"
+        questions[3] = "Multiline comment is created using ___."+"\n"
                         + "A) //" + "\n"  
                         + "B) /* */" + "\n"  
                         + "C) <!--  -- >"+ "\n" 
                         + "D) All of these" + "\n"; //B
 
-        questions[3] = "Stacks follow the __ principle, while Queues follow the __ principle." + "\n"
+        questions[4] = "Stacks follow the __ principle, while Queues follow the __ principle." + "\n"
                         + "A) LIFO, FIFO" + "\n" 
                         + "B) Array, List" + "\n"
                         + "C) FILO, OFIF" + "\n"
                         + "D) FIFO, LIFO";
 
-        questions[4] = "In Java, inheriting from a class uses the ___ keyword, while using an interface uses the ___ keyword." + "\n"
+        questions[5] = "In Java, inheriting from a class uses the ___ keyword, while using an interface uses the ___ keyword." + "\n"
                         + "A) implements, extends" + "\n" 
                         + "B) is, using" + "\n"
                         + "C) implement, extend" + "\n"
                         + "D) extends, implements";
         
-        questions[5] = "Which keyword in java is used for exception handling?" + "\n"
+        questions[6] = "Which keyword in java is used for exception handling?" + "\n"
                         + "A) exep" + "\n" 
                         + "B) excepHand" + "\n"
                         + "C) throw" + "\n" 
@@ -122,15 +123,13 @@ public class screen : MonoBehaviour
             if(pd.day == 0){
                 dayzerotext.text = "You haven't taken any classes yet!"+"\nPlaese go to class first!";
             }
-            
             qd.ClearOptions();
             List<string> list = new List<string>();
-            
+            list.Add("select available questions");
             for(int d = 0; d< pd.day; d++){
                 Debug.Log("d: "+d);
                 Debug.Log("questions["+d+"]: "+ days[d]);
                 list.Add(days[d]);
-                
             }
             qd.AddOptions(list);
             
